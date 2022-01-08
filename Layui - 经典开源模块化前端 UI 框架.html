@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)https://layui.itze.cn/ -->
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Layui - 经典开源模块化前端 UI 框架</title>
+    <meta name="keywords" content="layui,ui,ui框架,前端框架,JS组件">
+    <meta name="description" content="layui 是一套开源的 Web UI 解决方案，其内部采用的是自身经典的模块化规范，并遵循原生 HTML/CSS/JS 的开发方式，极易上手，拿来即用。其外在极简，却又不失饱满的内在，体积轻盈，组件丰盈，从核心代码到使用方法的每一处细节都经过精心雕琢，非常适合网页界面的快速开发。">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    
+    <link rel="stylesheet" href="./Layui - 经典开源模块化前端 UI 框架_files/layui.css" media="all">
+    <link rel="stylesheet" href="./Layui - 经典开源模块化前端 UI 框架_files/global.css" media="all">
+<link id="layuicss-laydate" rel="stylesheet" href="./Layui - 经典开源模块化前端 UI 框架_files/laydate.css" media="all"><link id="layuicss-layer" rel="stylesheet" href="./Layui - 经典开源模块化前端 UI 框架_files/layer.css" media="all"><link id="layuicss-skincodecss" rel="stylesheet" href="./Layui - 经典开源模块化前端 UI 框架_files/code.css" media="all"><script src="./Layui - 经典开源模块化前端 UI 框架_files/hm.js.下载"></script><meta http-equiv="origin-trial" content="AxujKG9INjsZ8/gUq8+dTruNvk7RjZQ1oFhhgQbcTJKDnZfbzSTE81wvC2Hzaf3TW4avA76LTZEMdiedF1vIbA4AAABueyJvcmlnaW4iOiJodHRwczovL2ltYXNkay5nb29nbGVhcGlzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0="><meta http-equiv="origin-trial" content="Azuce85ORtSnWe1MZDTv68qpaW3iHyfL9YbLRy0cwcCZwVnePnOmkUJlG8HGikmOwhZU22dElCcfrfX2HhrBPAkAAAB7eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A16nvcdeoOAqrJcmjLRpl1I6f3McDD8EfofAYTt/P/H4/AWwB99nxiPp6kA0fXoiZav908Z8etuL16laFPUdfQsAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="AxBHdr0J44vFBQtZUqX9sjiqf5yWZ/OcHRcRMN3H9TH+t90V/j3ENW6C8+igBZFXMJ7G3Pr8Dd13632aLng42wgAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A88BWHFjcawUfKU3lIejLoryXoyjooBXLgWmGh+hNcqMK44cugvsI5YZbNarYvi3roc1fYbHA1AVbhAtuHZflgEAAAB2eyJvcmlnaW4iOiJodHRwczovL2dvb2dsZS5jb206NDQzIiwiZmVhdHVyZSI6IlRydXN0VG9rZW5zIiwiZXhwaXJ5IjoxNjUyNzc0NDAwLCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A/OOU4XAFfeAV4kM4+W9WBwNAHqq/bvtrRcJ1wpnNyO/i076BSUy1d14l2kBEgVmEuvxojSpD23172C6hBg2AQYAAACWeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjM0MDgzMTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9"><meta http-equiv="origin-trial" content="AwrB+XVH/KV6HfZNVtSEqlUJi3yUbtCp0/TJRj+38NDIw19/9P1h7ECTtdLdhIzG0Bsl4n/0rVmttJtGUCcewgAAAACceyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjM0MDgzMTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9"><meta http-equiv="origin-trial" content="Ax15QOERqai2A5XWrDY38Eg07xh2T0pkhpDPJuDlxr7D2Ka8wHvklgK7tTPZOnT+8H31lwHto5JpvYV8jRn1WgIAAACceyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjM0MDgzMTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9"></head>
+
+<body class="site-home" id="LAY_home" style="background-color: #eee;" data-date="9-24">
+
+
+    <div class="layui-header header header-index" autumn="">
+        <div class="layui-container">
+            <a class="logo" href="https://layui.itze.cn/">
+                <img src="./Layui - 经典开源模块化前端 UI 框架_files/logo.png" alt="layui">
+            </a>
+            <div class="layui-form layui-hide-xs component" lay-filter="LAY-site-header-component"><select lay-search="" lay-filter="component"><option value="">搜索组件模块</option><option value="element/layout.html">grid 栅格布局</option><option value="element/layout.html#admin">layout admin 布局</option><option value="element/color.html">color 颜色</option><option value="element/icon.html">iconfont 字体图标</option><option value="base/element.html#css">font 字体大小 颜色</option><option value="element/anim.html">animation 动画</option><option value="element/button.html">button 按钮</option><option value="element/form.html">form 表单组</option><option value="element/form.html#input">input 输入框</option><option value="element/form.html#select">select 下拉选择框</option><option value="element/form.html#checkbox">checkbox 复选框</option><option value="element/form.html#switch">switch 开关</option><option value="element/form.html#radio">radio 单选框</option><option value="element/form.html#textarea">textarea 文本域</option><option value="element/nav.html">nav 导航菜单</option><option value="element/menu.html">menu 基础通用菜单</option><option value="element/nav.html#breadcrumb">breadcrumb 面包屑</option><option value="element/tab.html">tabs 选项卡</option><option value="element/progress.html">progress 进度条</option><option value="element/panel.html">panel 面板 / card</option><option value="element/collapse.html">collapse 折叠面板/手风琴</option><option value="element/table.html">table 表格元素</option><option value="element/badge.html">badge 徽章</option><option value="element/timeline.html">timeline 时间线</option><option value="element/auxiliar.html#blockquote">blockquote 引用块</option><option value="element/auxiliar.html#fieldset">fieldset 字段集</option><option value="element/auxiliar.html#hr">hr 分割线</option><option value="modules/layer.html">layer 弹出层/弹窗综合</option><option value="modules/laydate.html">laydate 日期时间选择器</option><option value="modules/laypage.html">laypage 分页</option><option value="modules/laytpl.html">laytpl 模板引擎</option><option value="modules/table.html">table 数据表格</option><option value="modules/form.html">form 表单模块</option><option value="modules/upload.html">upload 文件/图片上传</option><option value="modules/dropdown.html">dropdown 下拉菜单</option><option value="modules/dropdown.html#contextmenu">contextmenu 右键菜单</option><option value="modules/transfer.html">transfer 穿梭框</option><option value="modules/tree.html">tree 树形菜单</option><option value="modules/colorpicker.html">colorpicker 颜色选择器</option><option value="modules/element.html">element 常用元素操作</option><option value="modules/slider.html">slider 滑块</option><option value="modules/rate.html">rate 评分</option><option value="modules/carousel.html">carousel 轮播/跑马灯</option><option value="modules/layedit.html">layedit 富文本编辑器</option><option value="modules/flow.html">flow 信息流/图片懒加载</option><option value="modules/util.html">util 工具集</option><option value="modules/code.html">code 代码文本行修饰</option><option value="/layim/">layim</option><option value="/layuiadmin/">layuiadmin</option></select><div class="layui-form-select"><div class="layui-select-title"><input type="text" placeholder="搜索组件模块" value="" class="layui-input"><i class="layui-edge"></i></div><dl class="layui-anim layui-anim-upbit"><dd lay-value="" class="layui-select-tips">搜索组件模块</dd><dd lay-value="element/layout.html" class="">grid 栅格布局</dd><dd lay-value="element/layout.html#admin" class="">layout admin 布局</dd><dd lay-value="element/color.html" class="">color 颜色</dd><dd lay-value="element/icon.html" class="">iconfont 字体图标</dd><dd lay-value="base/element.html#css" class="">font 字体大小 颜色</dd><dd lay-value="element/anim.html" class="">animation 动画</dd><dd lay-value="element/button.html" class="">button 按钮</dd><dd lay-value="element/form.html" class="">form 表单组</dd><dd lay-value="element/form.html#input" class="">input 输入框</dd><dd lay-value="element/form.html#select" class="">select 下拉选择框</dd><dd lay-value="element/form.html#checkbox" class="">checkbox 复选框</dd><dd lay-value="element/form.html#switch" class="">switch 开关</dd><dd lay-value="element/form.html#radio" class="">radio 单选框</dd><dd lay-value="element/form.html#textarea" class="">textarea 文本域</dd><dd lay-value="element/nav.html" class="">nav 导航菜单</dd><dd lay-value="element/menu.html" class="">menu 基础通用菜单</dd><dd lay-value="element/nav.html#breadcrumb" class="">breadcrumb 面包屑</dd><dd lay-value="element/tab.html" class="">tabs 选项卡</dd><dd lay-value="element/progress.html" class="">progress 进度条</dd><dd lay-value="element/panel.html" class="">panel 面板 / card</dd><dd lay-value="element/collapse.html" class="">collapse 折叠面板/手风琴</dd><dd lay-value="element/table.html" class="">table 表格元素</dd><dd lay-value="element/badge.html" class="">badge 徽章</dd><dd lay-value="element/timeline.html" class="">timeline 时间线</dd><dd lay-value="element/auxiliar.html#blockquote" class="">blockquote 引用块</dd><dd lay-value="element/auxiliar.html#fieldset" class="">fieldset 字段集</dd><dd lay-value="element/auxiliar.html#hr" class="">hr 分割线</dd><dd lay-value="modules/layer.html" class="">layer 弹出层/弹窗综合</dd><dd lay-value="modules/laydate.html" class="">laydate 日期时间选择器</dd><dd lay-value="modules/laypage.html" class="">laypage 分页</dd><dd lay-value="modules/laytpl.html" class="">laytpl 模板引擎</dd><dd lay-value="modules/table.html" class="">table 数据表格</dd><dd lay-value="modules/form.html" class="">form 表单模块</dd><dd lay-value="modules/upload.html" class="">upload 文件/图片上传</dd><dd lay-value="modules/dropdown.html" class="">dropdown 下拉菜单</dd><dd lay-value="modules/dropdown.html#contextmenu" class="">contextmenu 右键菜单</dd><dd lay-value="modules/transfer.html" class="">transfer 穿梭框</dd><dd lay-value="modules/tree.html" class="">tree 树形菜单</dd><dd lay-value="modules/colorpicker.html" class="">colorpicker 颜色选择器</dd><dd lay-value="modules/element.html" class="">element 常用元素操作</dd><dd lay-value="modules/slider.html" class="">slider 滑块</dd><dd lay-value="modules/rate.html" class="">rate 评分</dd><dd lay-value="modules/carousel.html" class="">carousel 轮播/跑马灯</dd><dd lay-value="modules/layedit.html" class="">layedit 富文本编辑器</dd><dd lay-value="modules/flow.html" class="">flow 信息流/图片懒加载</dd><dd lay-value="modules/util.html" class="">util 工具集</dd><dd lay-value="modules/code.html" class="">code 代码文本行修饰</dd><dd lay-value="/layim/" class="">layim</dd><dd lay-value="/layuiadmin/" class="">layuiadmin</dd></dl></div><i class="layui-icon layui-icon-search"></i></div>
+            <div class="layui-hide-xs site-notice"></div>
+
+            <ul class="layui-nav" id="LAY_NAV_TOP">
+                <li class="layui-nav-item ">
+                    <a href="https://layui.itze.cn/doc/index.html">文档</a>
+                </li>
+                <li class="layui-nav-item ">
+                    <a href="https://layui.itze.cn/demo/index.html">示例</a>
+                </li>
+                <li class="layui-nav-item ">
+                    <a href="https://layer.itze.cn/" target="_blank">弹出层（layer）</a>
+                </li>
+
+                <li class="layui-nav-item">
+                    <a href="javascript:;">
+                        <!--<span class="layui-badge-dot" style="left:0; right: auto; margin: -4px 0 0 5px;"></span>-->
+                        周边
+                    <i class="layui-icon layui-icon-down layui-nav-more"></i></a>
+                    <dl class="layui-nav-child layui-nav-child-c layui-anim layui-anim-upbit" style="left: -15px;">
+                        <dd class="layui-hide-sm layui-show-xs" lay-unselect="">
+                            <a href="javascript:;" target="_blank" rel="nofollow">问题反馈</a>
+                            <hr>
+                        </dd>
+
+                        <dd lay-unselect=""><a href="https://layui.itze.cn/alone.html" target="_blank" lay-unselect="">独立组件</a></dd>
+                        <dd lay-unselect=""><a href="https://layui.itze.cn/extend/index.html" target="_blank">扩展组件</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item layui-hide-xs">
+                     <a href="https://gitee.com/sentsin/layui/issues" target="_blank" rel="nofollow">反馈（文档问题反馈QQ群：12622744）</a>
+                </li>
+                <div class="layui-footer footer footer-doc"></div>
+            <span class="layui-nav-bar" style="left: 524.35px; top: 55px; width: 293px; opacity: 1;"></span></ul>
+        </div>
+    </div>
+
+    <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+    <!--[if lt IE 9]>
+  <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+  <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+    <div class="site-banner">
+        <div class="site-banner-bg" style="background-image: url(static/images/layui/banner/autumn.jpg); background-size: cover;" autumn="">
+        </div>
+        <div class="site-banner-main">
+            <div class="site-zfj site-zfj-anim">
+                <i class="layui-icon" style="color: #fff; color: rgba(255,255,255,.6);"></i>
+            </div>
+            <div class="layui-anim site-desc site-desc-anim">
+                <p class="web-font-desc">开源模块化前端 UI 框架</p>
+                <cite>由职业前端倾情打造，面向全层次的前后端开发者，易上手开源免费的 Web UI 组件库</cite>
+            </div>
+            <div class="site-download">
+                <a href="https://layui.itze.cn/static/download/layui/layui-v2.6.8.zip" class="layui-inline site-down" target="_blank">
+                    <cite class="layui-icon"></cite> 立即下载
+                </a>
+            </div>
+            <div class="site-version">
+                <span>当前版本：v<cite class="site-showv">2.6.8</cite></span>
+                <span><a href="https://layui.itze.cn/doc/base/changelog.html" rel="nofollow" target="_blank">更新日志</a></span>
+                <span>下载量：<em class="site-showdowns">964861515+</em></span>
+            </div>
+            <div class="site-banner-other">
+                <a class="layui-btn layui-btn-normal" href="https://github.com/sentsin/layui" target="_blank" rel="nofollow" style="background-color: #24292E; color: #fff;">GitHub</a>
+                <a class="layui-btn layui-btn-normal" href="https://gitee.com/sentsin/layui" target="_blank" rel="nofollow" style="background-color: #C71D23; color: #fff;">Gitee码云</a>
+                <a href="https://github.com/sentsin/layui/" target="_blank" rel="nofollow" class="site-star">
+                    <i class="layui-icon"></i> Star <cite id="getStars">25281</cite>
+                </a>
+                <a id="layui-link" target="_blank" rel="nofollow" class="site-fork">
+                    layui在线引用
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="layui-container">
+
+
+        <ul class="layui-row layui-col-space30 site-idea">
+            <li class="layui-col-md4">
+                <div>
+                    <fieldset class="layui-elem-field layui-field-title">
+                        <legend>返璞归真</legend>
+                        <p>身处在前端社区的繁荣之下，我们都在有意或无意地追逐。而 layui 偏偏回望当初，奔赴在返璞归真的漫漫征途，自信并勇敢着，追寻于原生态的书写指令，试图以最简单的方式诠释高效。</p>
+                    </fieldset>
+                </div>
+            </li>
+            <li class="layui-col-md4">
+                <div>
+                    <fieldset class="layui-elem-field layui-field-title">
+                        <legend>双面体验</legend>
+                        <p>拥有双面的不仅是人生，还有 layui。一面极简，一面丰盈。极简是视觉所见的外在，是开发所念的简易。丰盈是倾情雕琢的内在，是信手拈来的承诺。一切本应如此，简而全，双重体验。</p>
+                    </fieldset>
+                </div>
+            </li>
+            <li class="layui-col-md4">
+                <div>
+                    <fieldset class="layui-elem-field layui-field-title">
+                        <legend>星辰大海</legend>
+                        <p>如果眼下还是一团零星之火，那运筹帷幄之后，迎面东风，就是一场烈焰燎原吧，那必定会是一番尽情的燃烧。待，秋风萧瑟时，散作满天星辰，你看那四季轮回
+                            <!--海天相接-->，正是 layui 不灭的执念。</p>
+                    </fieldset>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="layui-footer footer footer-index">
+
+    </div>
+    
+    <script>
+        window.global = {
+            pageType: 'index',
+            preview: function() {
+                var preview = document.getElementById('LAY_preview');
+                return preview ? preview.innerHTML : '';
+            }()
+        };
+    </script>
+    <script async="" src="./Layui - 经典开源模块化前端 UI 框架_files/adsbygoogle.js.下载"></script>
+    <div class="site-tree-mobile layui-hide">
+        <i class="layui-icon layui-icon-spread-left"></i>
+    </div>
+    <div class="site-mobile-shade"></div>
+
+    <script src="./Layui - 经典开源模块化前端 UI 框架_files/layui.js.下载"></script>
+    <script>
+        layui.config({
+            base: '../static/lay/modules/layui/',
+            version: '1632428048260'
+        }).use('global');
+    </script>
+
+    <script>
+ 
+		setTimeout(() => {
+            layer.alert('本站仅为layui文档保留使用！<br>与layui团队无关！<br>本站仅提供文档演示和下载！', {
+              time: 10*1000
+              ,success: function(layero, index){
+                var timeNum = this.time/1000, setText = function(start){
+                  layer.title((start ? timeNum : --timeNum) + ' 秒后关闭', index);
+                };
+                setText(!0);
+                this.timer = setInterval(setText, 1000);
+                if(timeNum <= 0) clearInterval(this.timer);
+              }
+              ,end: function(){
+                clearInterval(this.timer);
+              }
+            });
+        }, 2000);
+        document.getElementById("layui-link").onclick=()=>{
+            layer.alert(`
+            js 在线链接:<br>
+            https://layui.itze.cn/layui-v2.6.8/layui/layui.js<br>
+            css 在线链接:<br>
+            https://layui.itze.cn/layui-v2.6.8/layui/css/layui.css<br>
+            `, {
+              title:"在线引用地址(v2.6.8)",
+              skin: 'layui-layer-molv' //样式类名
+              ,closeBtn: 0
+              ,anim: parseInt(Math.random()*8,10)+1
+            });
+        }
+    </script>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?0f72e2f81e4a9d7e564487bb8957aca6";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+
+<ul class="layui-fixbar"><li class="layui-icon layui-fixbar-top" lay-type="top" style=""></li></ul><div class="layui-layer-move" id="layui-layer-move"></div></body><iframe id="google_esf" name="google_esf" src="./Layui - 经典开源模块化前端 UI 框架_files/zrt_lookup.html" style="display: none;"></iframe></html>
